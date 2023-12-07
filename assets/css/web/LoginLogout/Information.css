@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.font {
+    font-weight: 500;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+.font-14 {
+    font-size: 14px;
+}
+.font-16 {
+    font-size: 16px;
+}
+.mgb-7 {
+    margin-bottom: 7px;
+}
+.mgb-28 {
+    margin-bottom: 28px;
+}
+.mgb-16 {
+    margin-bottom: 16px;
+}
+.br-2{
+    border-right: 2px solid #eee;
+}
+.b-2 {
+    border: 2px solid #eee;
+}
+table ,td, th {
+    border: 1px solid #eee;
+}
