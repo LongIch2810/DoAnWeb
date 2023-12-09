@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.c-bl {
+    color:#12487f ;
+}
+
+.font {
+    font-weight: 500;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+.font-14 {
+    font-size: 14px;
+}
+.font-16 {
+    font-size: 16px;
+}
+.mgb-7 {
+    margin-bottom: 7px;
+}
+.mgb-28 {
+    margin-bottom: 28px;
+}
+.mgb-16 {
+    margin-bottom: 16px;
+}
+.br-2{
+    border-right: 2px solid #eee;
+}
+.b-2 {
+    border: 2px solid #eee;
+}
+.bt-2 {
+    border-bottom: 2px solid #eee;
+}
+.add-address button{
+    border: none;
+    padding: 15px 15px;
+    border-radius: 8px;
+    transition: all 0.15s ease;
+}
+.add-address button:hover{
+    opacity: 0.8;
+}
+.mgr-5 {
+    margin-right: 5px;
+}
+
+.mgr-3 {
+    margin-right: 3px;
+}
+
+.address-detail {
+    position: relative;
+}
+.child-1,.child-2,.child-3,.child-4,.child-5 {
+    display: none;
+}
+.flr {
+    float: right;
+}
+
+.edit {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #12487f;
+}
+
+.edit:hover {
+   color: #000;
+}
+
+.form-add-address,.form-edit-address {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #eee;
+    padding: 20px;
+    background-color: #fff;
+    display: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-edit-address .title,
+.form-add-address .title {
+    position: relative;
+}
+
+.form-edit-address .close,
+.form-add-address .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.form-edit-address .close:hover,
+.form-add-address .close:hover {
+    background-color: #12487f;
+    border: 1px dashed #eee;
+    color: #fff;
+}
+
+.form-edit-address form input,
+.form-add-address form input {
+    padding: 5px;
+    height: 40px;
+}
+
+.form-edit-address form select,
+.form-add-address form select {
+    padding: 5px;
+    height: 40px;
+    outline: none;
+}
+
+.cancel {
+    border: 1px solid grey;
+    padding: 14px 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: all 0.15s ease;
+}
+
+.cancel:hover {
+    background-color: grey;
+    color: #fff;
+}
+
+.btn-edit,
+.btn-add {
+    border: none;
+    padding: 15px 15px;
+    background-color: #12487f;
+    color: #fff;
+    border-radius: 3px;
+    transition: all 0.15s ease;
+}
+
+.btn-edit:hover,
+.btn-add:hover {
+    opacity: 0.8;
+}
+.VN,.USA,.TL {
+    display: none;
+    padding: 5px;
+    height: 40px;
+    outline: none;
+    border: 2px solid #eee;
+    margin-bottom: 16px;
+}

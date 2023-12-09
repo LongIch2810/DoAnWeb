@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sổ địa chỉ</title>
+    <link
+      rel="stylesheet"
+      href="../../lib/bootstrap-5.3.2-dist/css/bootstrap.css"
+    />
+
+    <!-- Fontawsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Css -->
+    <!-- <link rel="stylesheet" href="/assets/css/reset.css"/> -->
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/web/header.css" />
+    <link rel="stylesheet" href="../../assets/css/web/footer.css" />
+    <link rel="stylesheet" href="../../assets/css/web/contact.css" />
+    <link
+      rel="stylesheet"
+      href="../../assets/css/web/LoginLogout/address.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container w-100 b-2 main">
+      <div class="row h-100 w-100">
+        <div class="col-12 col-sm-4 h-100 br-2 mt-1">
+          <p class="font mgb-7">Trang tài khoản</p>
+          <p class="font-14 mgb-28 hello">
+            Xin chào, <span style="color: #12487f" class="username"></span>
+          </p>
+          <ul class="mgb-28">
+            <li class="mgb-28">
+              <a
+                href="http://127.0.0.1:5500/DoAnWeb-main/views/web/Information.html"
+                class="font-14 text-black"
+                >Thông tin tài khoản</a
+              >
+            </li>
+            <li class="mgb-28">
+              <a
+                href="http://127.0.0.1:5500/DoAnWeb-main/views/web/address.html"
+                class="font-14 c-bl"
+                >Sổ địa chỉ</a
+              >
+            </li>
+            <li class="logout">
+              <a
+                href="http://127.0.0.1:5500/DoAnWeb-main/views/web/login.html"
+                class="font-16 text-black"
+                >Đăng xuất</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-8 col-12 h-100 mt-1">
+          <p class="font mgb-16">Địa chỉ của bạn</p>
+          <div class="mgb-16 add-address">
+            <button
+              class="text-white"
+              style="background-color: #12487f"
+              onclick="openTabAdd()"
+            >
+              Thêm địa chỉ
+            </button>
+          </div>
+          <div class="address-detail mgb-28 child-0">
+            <p class="text-secondary mgb-16">
+              Họ tên :
+              <span class="username text-black mgr-5"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Địa chỉ : <span class="country text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Số điện thoại : <span class="phoneuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Công ty : <span class="companyuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Tỉnh/thành phố : <span class="cityuser text-black"></span>
+            </p>
+            <p class="edit">Chỉnh sửa địa chỉ</p>
+          </div>
+          <div class="address-detail mgb-28 child-1">
+            <p class="text-secondary mgb-16">
+              Họ tên :
+              <span class="username text-black mgr-5"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Địa chỉ : <span class="country text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Số điện thoại : <span class="phoneuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Công ty : <span class="companyuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Tỉnh/thành phố : <span class="cityuser text-black"></span>
+            </p>
+            <p class="edit" onclick="openFormEdit()">Chỉnh sửa địa chỉ</p>
+          </div>
+          <div class="address-detail mgb-28 child-2">
+            <p class="text-secondary mgb-16">
+              Họ tên :
+              <span class="username text-black mgr-5"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Địa chỉ : <span class="country text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Số điện thoại : <span class="phoneuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Công ty : <span class="companyuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Tỉnh/thành phố : <span class="cityuser text-black"></span>
+            </p>
+            <p class="edit">Chỉnh sửa địa chỉ</p>
+          </div>
+          <div class="address-detail mgb-28 child-3">
+            <p class="text-secondary mgb-16">
+              Họ tên :
+              <span class="username text-black mgr-5"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Địa chỉ : <span class="country text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Số điện thoại : <span class="phoneuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Công ty : <span class="companyuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Tỉnh/thành phố : <span class="cityuser text-black"></span>
+            </p>
+            <p class="edit" onclick="openFormEdit()">Chỉnh sửa địa chỉ</p>
+          </div>
+          <div class="address-detail mgb-28 child-4">
+            <p class="text-secondary mgb-16">
+              Họ tên :
+              <span class="username text-black mgr-5"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Địa chỉ : <span class="country text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Số điện thoại : <span class="phoneuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Công ty : <span class="companyuser text-black"></span>
+            </p>
+            <p class="text-secondary mgb-16">
+              Tỉnh/thành phố : <span class="cityuser text-black"></span>
+            </p>
+            <p class="edit" onclick="openFormEdit()">Chỉnh sửa địa chỉ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="form-add-address col-12">
+          <form>
+            <div class="bt-2 mgb-16 title">
+              <p class="h4" style="font-weight: 600">Thêm địa chỉ mới</p>
+              <p class="close" onclick="closeTabAdd()"><i class="bx bx-x"></i></p>
+            </div>
+            <div class="container">
+              <div class="row">
+                <input
+                  type="text"
+                  class="col-12 b-2 mgb-16"
+                  placeholder="Họ tên"
+                  id="name"
+                  oninput="checkName()"
+                />
+                <p class="name-error"></p>
+                <input
+                  type="text"
+                  class="col-12 b-2 mgb-16"
+                  placeholder="Số điện thoại"
+                  id="phone"
+                  oninput="checkPhone()"
+                />
+                <p class="phone-error"></p>
+                <input
+                  type="text"
+                  class="col-12 b-2 mgb-16"
+                  placeholder="Công ty"
+                  id="company"
+                  oninput="checkCompany()"
+                />
+                <p class="company-error"></p>
+                <input
+                  type="text"
+                  class="col-12 b-2 mgb-16"
+                  placeholder="Địa chỉ"
+                  id="address"
+                  oninput="checkAddress()"
+                />
+                <p class="address-error"></p>
+                <select
+                  class="col-12 b-2 mgb-16"
+                  id="country"
+                  onclick="checkCountry()"
+                >
+                  <option checked>Vietnam</option>
+                  <option checked>United States</option>
+                  <option checked>Thailand</option>
+                </select>
+                <select
+                  class="VN"
+                  class="col-12 b-2 mgb-16"
+                  onclick="checkCountry()"
+                >
+                  <option value="AnGiang">An Giang</option>
+                  <option value="BaRiaVungTau">Bà Rịa - Vũng Tàu</option>
+                  <option value="BacLieu">Bạc Liêu</option>
+                  <option value="BacGiang">Bắc Giang</option>
+                  <option value="BacKan">Bắc Kạn</option>
+                  <option value="BacNinh">Bắc Ninh</option>
+                  <option value="BenTre">Bến Tre</option>
+                  <option value="BinhDinh">Bình Định</option>
+                  <option value="BinhDuong">Bình Dương</option>
+                  <option value="BinhPhuoc">Bình Phước</option>
+                  <option value="BinhThuan">Bình Thuận</option>
+                  <option value="CaMau">Cà Mau</option>
+                  <option value="CanTho">Cần Thơ</option>
+                  <option value="CaoBang">Cao Bằng</option>
+                  <option value="DaNang">Đà Nẵng</option>
+                  <option value="DakLak">Đắk Lắk</option>
+                  <option value="DakNong">Đắk Nông</option>
+                  <option value="DienBien">Điện Biên</option>
+                  <option value="DongNai">Đồng Nai</option>
+                  <option value="DongThap">Đồng Tháp</option>
+                  <option value="GiaLai">Gia Lai</option>
+                  <option value="HaGiang">Hà Giang</option>
+                  <option value="HaNam">Hà Nam</option>
+                  <option value="HaNoi">Hà Nội</option>
+                  <option value="HaTinh">Hà Tĩnh</option>
+                  <option value="HaiDuong">Hải Dương</option>
+                  <option value="HaiPhong">Hải Phòng</option>
+                  <option value="HauGiang">Hậu Giang</option>
+                  <option value="HoaBinh">Hòa Bình</option>
+                  <option value="HungYen">Hưng Yên</option>
+                  <option value="KhanhHoa">Khánh Hòa</option>
+                  <option value="KienGiang">Kiên Giang</option>
+                  <option value="KonTum">Kon Tum</option>
+                  <option value="LaiChau">Lai Châu</option>
+                  <option value="LamDong">Lâm Đồng</option>
+                  <option value="LangSon">Lạng Sơn</option>
+                  <option value="LaoCai">Lào Cai</option>
+                  <option value="LongAn">Long An</option>
+                  <option value="NamDinh">Nam Định</option>
+                  <option value="NgheAn">Nghệ An</option>
+                  <option value="NinhBinh">Ninh Bình</option>
+                  <option value="NinhThuan">Ninh Thuận</option>
+                  <option value="PhuTho">Phú Thọ</option>
+                  <option value="PhuYen">Phú Yên</option>
+                  <option value="QuangBinh">Quảng Bình</option>
+                  <option value="QuangNam">Quảng Nam</option>
+                  <option value="QuangNgai">Quảng Ngãi</option>
+                  <option value="QuangNinh">Quảng Ninh</option>
+                  <option value="QuangTri">Quảng Trị</option>
+                  <option value="SocTrang">Sóc Trăng</option>
+                  <option value="SonLa">Sơn La</option>
+                  <option value="TayNinh">Tây Ninh</option>
+                  <option value="ThaiBinh">Thái Bình</option>
+                  <option value="ThaiNguyen">Thái Nguyên</option>
+                  <option value="ThanhHoa">Thanh Hóa</option>
+                  <option value="ThuaThienHue">Thừa Thiên Huế</option>
+                  <option value="TienGiang">Tiền Giang</option>
+                  <option value="TraVinh">Trà Vinh</option>
+                  <option value="TuyenQuang">Tuyên Quang</option>
+                  <option value="VinhLong">Vĩnh Long</option>
+                  <option value="VinhPhuc">Vĩnh Phúc</option>
+                  <option value="YenBai">Yên Bái</option>
+                </select>
+                <select
+                  class="USA"
+                  class="col-12 b-2 mgb-16"
+                  onclick="checkCountry()"
+                >
+                  <option value="Alabama">Alabama</option>
+                  <option value="Alaska">Alaska</option>
+                  <option value="Arizona">Arizona</option>
+                  <option value="Arkansas">Arkansas</option>
+                  <option value="California">California</option>
+                  <option value="Colorado">Colorado</option>
+                  <option value="Connecticut">Connecticut</option>
+                  <option value="Delaware">Delaware</option>
+                  <option value="Florida">Florida</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Hawaii">Hawaii</option>
+                  <option value="Idaho">Idaho</option>
+                  <option value="Illinois">Illinois</option>
+                  <option value="Indiana">Indiana</option>
+                  <option value="Iowa">Iowa</option>
+                  <option value="Kansas">Kansas</option>
+                  <option value="Kentucky">Kentucky</option>
+                  <option value="Louisiana">Louisiana</option>
+                  <option value="Maine">Maine</option>
+                  <option value="Maryland">Maryland</option>
+                  <option value="Massachusetts">Massachusetts</option>
+                  <option value="Michigan">Michigan</option>
+                  <option value="Minnesota">Minnesota</option>
+                  <option value="Mississippi">Mississippi</option>
+                  <option value="Missouri">Missouri</option>
+                  <option value="Montana">Montana</option>
+                  <option value="Nebraska">Nebraska</option>
+                  <option value="Nevada">Nevada</option>
+                  <option value="NewHampshire">New Hampshire</option>
+                  <option value="NewJersey">New Jersey</option>
+                  <option value="NewMexico">New Mexico</option>
+                  <option value="NewYork">New York</option>
+                  <option value="NorthCarolina">North Carolina</option>
+                  <option value="NorthDakota">North Dakota</option>
+                  <option value="Ohio">Ohio</option>
+                  <option value="Oklahoma">Oklahoma</option>
+                  <option value="Oregon">Oregon</option>
+                  <option value="Pennsylvania">Pennsylvania</option>
+                  <option value="RhodeIsland">Rhode Island</option>
+                  <option value="SouthCarolina">South Carolina</option>
+                  <option value="SouthDakota">South Dakota</option>
+                  <option value="Tennessee">Tennessee</option>
+                  <option value="Texas">Texas</option>
+                  <option value="Utah">Utah</option>
+                  <option value="Vermont">Vermont</option>
+                  <option value="Virginia">Virginia</option>
+                  <option value="Washington">Washington</option>
+                  <option value="WestVirginia">West Virginia</option>
+                  <option value="Wisconsin">Wisconsin</option>
+                  <option value="Wyoming">Wyoming</option>
+                </select>
+                <select
+                  class="TL"
+                  class="col-12 b-2 mgb-16"
+                  onclick="checkCountry()"
+                >
+                  <option value="Bangkok">Bangkok</option>
+                  <option value="PhraNakhonSiAyutthaya">
+                    Phra Nakhon Si Ayutthaya
+                  </option>
+                  <option value="AngThong">Ang Thong</option>
+                  <option value="NakhonPathom">Nakhon Pathom</option>
+                  <option value="NakhonNayok">Nakhon Nayok</option>
+                  <option value="Kanchanaburi">Kanchanaburi</option>
+                  <option value="Chachoengsao">Chachoengsao</option>
+                  <option value="Chonburi">Chonburi</option>
+                  <option value="Rayong">Rayong</option>
+                  <option value="Chanthaburi">Chanthaburi</option>
+                  <option value="Trat">Trat</option>
+                  <option value="Chachoengsao">Chachoengsao</option>
+                  <option value="SaKaeo">Sa Kaeo</option>
+                  <option value="Prachinburi">Prachinburi</option>
+                  <option value="NakhonRatchasima">Nakhon Ratchasima</option>
+                  <option value="BuriRam">Buri Ram</option>
+                  <option value="Surin">Surin</option>
+                  <option value="SiSaKet">Si Sa Ket</option>
+                  <option value="UbonRatchathani">Ubon Ratchathani</option>
+                  <option value="Yasothon">Yasothon</option>
+                  <option value="AmnatCharoen">Amnat Charoen</option>
+                  <option value="Mukdahan">Mukdahan</option>
+                  <option value="NakhonPhanom">Nakhon Phanom</option>
+                  <option value="SakonNakhon">Sakon Nakhon</option>
+                  <option value="NongKhai">Nong Khai</option>
+                  <option value="BuengKan">Bueng Kan</option>
+                  <option value="UdonThani">Udon Thani</option>
+                  <option value="Loei">Loei</option>
+                  <option value="NongBuaLamphu">Nong Bua Lamphu</option>
+                  <option value="KhonKaen">Khon Kaen</option>
+                  <option value="Chaiyaphum">Chaiyaphum</option>
+                  <option value="NakhonRatchasima">Nakhon Ratchasima</option>
+                  <option value="Buriram">Buriram</option>
+                  <option value="Surin">Surin</option>
+                  <option value="Sisaket">Sisaket</option>
+                  <option value="UbonRatchathani">Ubon Ratchathani</option>
+                  <option value="NakhonSiThammarat">Nakhon Si Thammarat</option>
+                  <option value="Krabi">Krabi</option>
+                  <option value="PhangNga">Phang Nga</option>
+                  <option value="Phuket">Phuket</option>
+                  <option value="SuratThani">Surat Thani</option>
+                  <option value="Ranong">Ranong</option>
+                  <option value="Chumphon">Chumphon</option>
+                  <option value="PrachuapKhiriKhan">Prachuap Khiri Khan</option>
+                  <option value="NakhonSiThammarat">Nakhon Si Thammarat</option>
+                  <option value="Trang">Trang</option>
+                  <option value="Phatthalung">Phatthalung</option>
+                  <option value="Satun">Satun</option>
+                  <option value="Songkhla">Songkhla</option>
+                  <option value="Pattani">Pattani</option>
+                  <option value="Yala">Yala</option>
+                  <option value="Narathiwat">Narathiwat</option>
+                </select>
+                <div class="notification"></div>
+                <div class="add">
+                  <button class="cancel" onclick="closeTabAdd()">Hủy</button>
+                  <button class="btn-add">Thêm địa chỉ</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="form-edit-address col-12">
+          <form>
+            <div class="bt-2 mgb-16 title">
+              <p class="h4" style="font-weight: 600">Chỉnh sửa địa chỉ</p>
+              <p class="close" onclick="closeFormEdit()"><i class="bx bx-x"></i></p>
+            </div>
+            <div class="container">
+              <div class="row">
+                <input
+                  type="text"
+                  class="col-12 b-2 mgb-16"
+                  placeholder="Họ tên"
+                  id="nameedit"
+                  oninput="checkNameEdit()"
+                />
+                <p class="name-error"></p>
+                <input
+                  type="text"
+                  class="col-12 b-2 mgb-16"
+                  placeholder="Số điện thoại"
+                  id="phoneedit"
+                  oninput="checkPhoneEdit()"
+                />
+                <p class="phone-error"></p>
+                <input
+                  type="text"
+                  class="col-12 b-2 mgb-16"
+                  placeholder="Công ty"
+                  id="companyedit"
+                  oninput="checkCompanyEdit()"
+                />
+                <p class="company-error"></p>
+                <input
+                  type="text"
+                  class="col-12 b-2 mgb-16"
+                  placeholder="Địa chỉ"
+                  id="addressedit"
+                  oninput="checkAddressEdit()"
+                />
+                <p class="address-error"></p>
+                <select
+                  class="col-12 b-2 mgb-16"
+                  id="countryedit"
+                  onclick="checkCountryEdit()"
+                >
+                  <option checked>Vietnam</option>
+                  <option checked>United States</option>
+                  <option checked>Thailand</option>
+                </select>
+                <select
+                class="col-12 b-2 mgb-16 VN"
+                onclick="checkCountryEdit()"
+              >
+                <option value="AnGiang">An Giang</option>
+                <option value="BaRiaVungTau">Bà Rịa - Vũng Tàu</option>
+                <option value="BacLieu">Bạc Liêu</option>
+                <option value="BacGiang">Bắc Giang</option>
+                <option value="BacKan">Bắc Kạn</option>
+                <option value="BacNinh">Bắc Ninh</option>
+                <option value="BenTre">Bến Tre</option>
+                <option value="BinhDinh">Bình Định</option>
+                <option value="BinhDuong">Bình Dương</option>
+                <option value="BinhPhuoc">Bình Phước</option>
+                <option value="BinhThuan">Bình Thuận</option>
+                <option value="CaMau">Cà Mau</option>
+                <option value="CanTho">Cần Thơ</option>
+                <option value="CaoBang">Cao Bằng</option>
+                <option value="DaNang">Đà Nẵng</option>
+                <option value="DakLak">Đắk Lắk</option>
+                <option value="DakNong">Đắk Nông</option>
+                <option value="DienBien">Điện Biên</option>
+                <option value="DongNai">Đồng Nai</option>
+                <option value="DongThap">Đồng Tháp</option>
+                <option value="GiaLai">Gia Lai</option>
+                <option value="HaGiang">Hà Giang</option>
+                <option value="HaNam">Hà Nam</option>
+                <option value="HaNoi">Hà Nội</option>
+                <option value="HaTinh">Hà Tĩnh</option>
+                <option value="HaiDuong">Hải Dương</option>
+                <option value="HaiPhong">Hải Phòng</option>
+                <option value="HauGiang">Hậu Giang</option>
+                <option value="HoaBinh">Hòa Bình</option>
+                <option value="HungYen">Hưng Yên</option>
+                <option value="KhanhHoa">Khánh Hòa</option>
+                <option value="KienGiang">Kiên Giang</option>
+                <option value="KonTum">Kon Tum</option>
+                <option value="LaiChau">Lai Châu</option>
+                <option value="LamDong">Lâm Đồng</option>
+                <option value="LangSon">Lạng Sơn</option>
+                <option value="LaoCai">Lào Cai</option>
+                <option value="LongAn">Long An</option>
+                <option value="NamDinh">Nam Định</option>
+                <option value="NgheAn">Nghệ An</option>
+                <option value="NinhBinh">Ninh Bình</option>
+                <option value="NinhThuan">Ninh Thuận</option>
+                <option value="PhuTho">Phú Thọ</option>
+                <option value="PhuYen">Phú Yên</option>
+                <option value="QuangBinh">Quảng Bình</option>
+                <option value="QuangNam">Quảng Nam</option>
+                <option value="QuangNgai">Quảng Ngãi</option>
+                <option value="QuangNinh">Quảng Ninh</option>
+                <option value="QuangTri">Quảng Trị</option>
+                <option value="SocTrang">Sóc Trăng</option>
+                <option value="SonLa">Sơn La</option>
+                <option value="TayNinh">Tây Ninh</option>
+                <option value="ThaiBinh">Thái Bình</option>
+                <option value="ThaiNguyen">Thái Nguyên</option>
+                <option value="ThanhHoa">Thanh Hóa</option>
+                <option value="ThuaThienHue">Thừa Thiên Huế</option>
+                <option value="TienGiang">Tiền Giang</option>
+                <option value="TraVinh">Trà Vinh</option>
+                <option value="TuyenQuang">Tuyên Quang</option>
+                <option value="VinhLong">Vĩnh Long</option>
+                <option value="VinhPhuc">Vĩnh Phúc</option>
+                <option value="YenBai">Yên Bái</option>
+              </select>
+              <select
+                class="col-12 b-2 mgb-16 USA"
+                onclick="checkCountryEdit()"
+              >
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="NewHampshire">New Hampshire</option>
+                <option value="NewJersey">New Jersey</option>
+                <option value="NewMexico">New Mexico</option>
+                <option value="NewYork">New York</option>
+                <option value="NorthCarolina">North Carolina</option>
+                <option value="NorthDakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="RhodeIsland">Rhode Island</option>
+                <option value="SouthCarolina">South Carolina</option>
+                <option value="SouthDakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="WestVirginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option>
+              </select>
+              <select
+                class="TL col-12 b-2 mgb-16"
+                onclick="checkCountryEdit()"
+              >
+                <option value="Bangkok">Bangkok</option>
+                <option value="PhraNakhonSiAyutthaya">
+                  Phra Nakhon Si Ayutthaya
+                </option>
+                <option value="AngThong">Ang Thong</option>
+                <option value="NakhonPathom">Nakhon Pathom</option>
+                <option value="NakhonNayok">Nakhon Nayok</option>
+                <option value="Kanchanaburi">Kanchanaburi</option>
+                <option value="Chachoengsao">Chachoengsao</option>
+                <option value="Chonburi">Chonburi</option>
+                <option value="Rayong">Rayong</option>
+                <option value="Chanthaburi">Chanthaburi</option>
+                <option value="Trat">Trat</option>
+                <option value="Chachoengsao">Chachoengsao</option>
+                <option value="SaKaeo">Sa Kaeo</option>
+                <option value="Prachinburi">Prachinburi</option>
+                <option value="NakhonRatchasima">Nakhon Ratchasima</option>
+                <option value="BuriRam">Buri Ram</option>
+                <option value="Surin">Surin</option>
+                <option value="SiSaKet">Si Sa Ket</option>
+                <option value="UbonRatchathani">Ubon Ratchathani</option>
+                <option value="Yasothon">Yasothon</option>
+                <option value="AmnatCharoen">Amnat Charoen</option>
+                <option value="Mukdahan">Mukdahan</option>
+                <option value="NakhonPhanom">Nakhon Phanom</option>
+                <option value="SakonNakhon">Sakon Nakhon</option>
+                <option value="NongKhai">Nong Khai</option>
+                <option value="BuengKan">Bueng Kan</option>
+                <option value="UdonThani">Udon Thani</option>
+                <option value="Loei">Loei</option>
+                <option value="NongBuaLamphu">Nong Bua Lamphu</option>
+                <option value="KhonKaen">Khon Kaen</option>
+                <option value="Chaiyaphum">Chaiyaphum</option>
+                <option value="NakhonRatchasima">Nakhon Ratchasima</option>
+                <option value="Buriram">Buriram</option>
+                <option value="Surin">Surin</option>
+                <option value="Sisaket">Sisaket</option>
+                <option value="UbonRatchathani">Ubon Ratchathani</option>
+                <option value="NakhonSiThammarat">Nakhon Si Thammarat</option>
+                <option value="Krabi">Krabi</option>
+                <option value="PhangNga">Phang Nga</option>
+                <option value="Phuket">Phuket</option>
+                <option value="SuratThani">Surat Thani</option>
+                <option value="Ranong">Ranong</option>
+                <option value="Chumphon">Chumphon</option>
+                <option value="PrachuapKhiriKhan">Prachuap Khiri Khan</option>
+                <option value="NakhonSiThammarat">Nakhon Si Thammarat</option>
+                <option value="Trang">Trang</option>
+                <option value="Phatthalung">Phatthalung</option>
+                <option value="Satun">Satun</option>
+                <option value="Songkhla">Songkhla</option>
+                <option value="Pattani">Pattani</option>
+                <option value="Yala">Yala</option>
+                <option value="Narathiwat">Narathiwat</option>
+              </select>
+                <div class="notification"></div>
+                <div class="add">
+                  <button class="cancel" onclick="closeFormEdit()">Hủy</button>
+                  <button class="btn-edit">Sửa địa chỉ</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../../lib/bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+    <!-- Fontawsome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="../../assets/JS/LoginLogout/address.js"></script>
+  </body>
+</html>

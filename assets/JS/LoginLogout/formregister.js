@@ -41,7 +41,7 @@ save.addEventListener("click", (e) => {
     });
     localStorage.setItem("UsersInfo", JSON.stringify(Users));
     alert("ĐĂNG KÝ THÀNH CÔNG");
-    window.location.href = "http://127.0.0.1:5500/views/web/login.html";
+    window.location.href = "http://127.0.0.1:5500/DoAnWeb-main/views/web/login.html";
   }
 });
 let booleanFirstName = false;

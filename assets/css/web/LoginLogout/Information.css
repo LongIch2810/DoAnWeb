@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.c-bl {
+    color:#12487f ;
+}
+
 .font {
     font-weight: 500;
     font-size: 19px;

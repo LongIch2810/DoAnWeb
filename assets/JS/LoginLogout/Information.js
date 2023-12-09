@@ -1,6 +1,6 @@
 let index = parseInt(localStorage.getItem('index'));
 console.log(index);
-if (index !== null) {
+
   document.querySelector("p .username").innerHTML = `${
     JSON.parse(localStorage.getItem("UsersInfo"))[index].lastNameUser
   } ${
@@ -21,4 +21,4 @@ if (index !== null) {
     JSON.parse(localStorage.getItem("UsersInfo"))[index].phoneUser
   }`;
   document.querySelector("div .phoneuser").style.fontSize = "14px";
-}
+
