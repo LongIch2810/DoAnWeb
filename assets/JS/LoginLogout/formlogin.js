@@ -1,6 +1,5 @@
 const putOut = document.querySelector(".form-login .login .btn");
-let index_email;
-let index_password;
+
 let booleanEmailLogin = false;
 let booleanPasswordLogin = false;
 
@@ -10,9 +9,8 @@ putOut.addEventListener("click", (e) => {
   const emailLogin = document.querySelector("#email");
   const passwordLogin = document.querySelector("#password");
   checkLo(emailLogin, passwordLogin);
-  if (booleanEmailLogin && booleanPasswordLogin && index_email===index_password) {
-    document.location.href="http://127.0.0.1:5500/DoAnWeb-main/views/web/Information.html";
-    localStorage.setItem("index",JSON.stringify(index_email));
+  if (booleanEmailLogin && booleanPasswordLogin) {
+    document.location.href="http://127.0.0.1:5500/mainpage.html";
   } else {
     document.querySelector(".notification").innerHTML =
       "<i class='bx bx-error-circle'></i> Email hoặc mật khẩu không chính xác";
@@ -34,19 +32,17 @@ function checkLo(emailLogin, passwordLogin){
       emailLogin.value
     ) {
       booleanEmailLogin = true;
-      index_email=i;
     } else {
       booleanEmailLogin = false;
     }
     if(JSON.parse(localStorage.getItem("UsersInfo"))[i].passwordUser ===
     passwordLogin.value) {
       booleanPasswordLogin = true;
-      index_password=i;
     }
     else {
       booleanPasswordLogin = false;
     }
-    if(booleanEmailLogin == true && booleanPasswordLogin == true && index_email===index_password){
+    if(booleanEmailLogin == true && booleanPasswordLogin == true){
       break;
     }
   }
